@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:orientation="vertical">
+	<TextView android:id="@+id/dex" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:text="@string/dex_text"
+	    android:textSize="30sp"
+	    android:layout_marginBottom="20dip" />
+	
+	<TextView android:id="@+id/jar" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:text="@string/jar_text"
+	    android:textSize="30sp"
+	    android:layout_marginBottom="20dip" />
+</LinearLayout>

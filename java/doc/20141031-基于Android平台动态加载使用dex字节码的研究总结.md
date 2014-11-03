@@ -6,8 +6,8 @@
 ### 1. 构造函数
 
     DexClassLoader(
-        String dexPath,           加在所需dex字节码文件的绝对路径
-        String optimizedDirectory 字节码使用缓存目录
+        String dexPath,           加载所需dex字节码文件的绝对路径
+        String optimizedDirectory 字节码优化缓存目录
         String libraryPath        本地库目录列表，可以置成null
         ClassLoader parent        父ClassLoader，加载类时优先从改loader中查找
     )
@@ -29,7 +29,7 @@
         e.printStackTrace();
     }
 
-上述代码首先构造了一个DexClassLoader实例，通过上下文context获得的ClassLoader作为其父loader。然后利用反射装在"cn.jj.jar.JarImpl"类，调用newInstance方法生成相应实例obj，再通过反射来调用接口，先调用setJarString传递设置一个字符串，再调用getJarString来获取该字符串。
+上述代码首先构造了一个DexClassLoader实例，通过上下文context获得的ClassLoader作为其父loader。然后利用反射装载"cn.jj.jar.JarImpl"类，调用newInstance方法生成相应实例obj，再通过invoke方法来调用接口，代码中先调用setJarString传递设置一个字符串，接着调用getJarString来获取该字符串。
 
 ## Android下的ClassLoader机制
 
